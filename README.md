@@ -1,4 +1,4 @@
-# Containerization-and-devops-lab
+# Containerization-and-Devops-Lab
 
 Name - Anshuman Mohapatra
 
