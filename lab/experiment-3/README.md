@@ -103,11 +103,17 @@ Each instruction in a Dockerfile creates a layer:
 docker pull nginx:latest
 ```
 
+![Setup](images/1.png)
+
+
 ### Step 2: Run Container
 
 ```bash
 docker run -d --name nginx-official -p 8080:80 nginx
 ```
+
+![Setup](images/2.png)
+
 
 ### Step 3: Verify
 
@@ -115,11 +121,15 @@ docker run -d --name nginx-official -p 8080:80 nginx
 curl http://localhost:8080
 ```
 
+
 OR open in browser:
 
 ```
 http://localhost:8080
 ```
+
+![Setup](images/3.png)
+
 
 ### Observations
 
@@ -158,17 +168,26 @@ CMD ["nginx", "-g", "daemon off;"]
 docker build -t nginx-ubuntu .
 ```
 
+![Setup](images/4.png)
+
+
 ### Step 3: Run Container
 
 ```bash
 docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 ```
 
+![Setup](images/5.png)
+
+
 ### Observations
 
 ```bash
 docker images nginx-ubuntu
 ```
+
+![Setup](images/6.png)
+
 
 - Large image (~220MB+)  
 - Many layers  
@@ -198,17 +217,26 @@ CMD ["nginx", "-g", "daemon off;"]
 docker build -t nginx-alpine .
 ```
 
+![Setup](images/7.png)
+
+
 ### Step 3: Run Container
 
 ```bash
 docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 ```
 
+![Setup](images/8.png)
+
+
 ### Observations
 
 ```bash
 docker images nginx-alpine
 ```
+
+![Setup](images/9.png)
+
 
 - Very small (~25–30MB)  
 - Minimal dependencies  
@@ -223,6 +251,9 @@ docker images nginx-alpine
 ```bash
 docker images | grep nginx
 ```
+
+![Setup](images/10.png)
+
 
 ### Sample Output
 
@@ -242,6 +273,9 @@ docker history nginx-ubuntu
 docker history nginx-alpine
 ```
 
+![Setup](images/11.png)
+
+
 ### Observations
 
 - Ubuntu → Many filesystem layers  
@@ -259,6 +293,9 @@ mkdir html
 echo "<h1>Hello from Docker NGINX</h1>" > html/index.html
 ```
 
+![Setup](images/12.png)
+
+
 ### Step 2: Run
 
 ```bash
@@ -275,6 +312,11 @@ Open:
 ```
 http://localhost:8083
 ```
+
+![Setup](images/13.png)
+
+![Setup](images/14.png)
+
 
 ---
 
