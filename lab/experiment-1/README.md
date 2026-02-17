@@ -77,6 +77,11 @@ https://www.virtualbox.org
 
 Install using default settings and restart if prompted.
 
+![Setup](images/1.png)
+
+![Setup](images/2.png)
+
+
 ---
 
 ## Step 2: Install Vagrant
@@ -95,6 +100,13 @@ Example Output:
 Vagrant 2.4.9
 ```
 
+![Setup](images/3.png)
+
+![Setup](images/4.png)
+
+![Setup](images/5.png)
+
+
 ---
 
 ## Step 3: Create Ubuntu VM using Vagrant
@@ -106,11 +118,17 @@ mkdir vm-lab
 cd vm-lab
 ```
 
+![Setup](images/6.png)
+
+
 Initialize Ubuntu box:
 
 ```powershell
 vagrant init ubuntu/jammy64
 ```
+
+![Setup](images/7.png)
+
 
 Start Virtual Machine:
 
@@ -118,11 +136,17 @@ Start Virtual Machine:
 vagrant up
 ```
 
+![Setup](images/8.png)
+
+
 Access VM:
 
 ```powershell
 vagrant ssh
 ```
+
+![Setup](images/9.png)
+
 
 ---
 
@@ -134,6 +158,9 @@ sudo apt install -y nginx
 sudo systemctl start nginx
 ```
 
+![Setup](images/10.png)
+
+
 ---
 
 ## Step 5: Verify Nginx in VM
@@ -141,6 +168,9 @@ sudo systemctl start nginx
 ```bash
 curl localhost
 ```
+
+![Setup](images/11.png)
+
 
 If Nginx default HTML page appears, deployment is successful.
 
@@ -152,6 +182,9 @@ If Nginx default HTML page appears, deployment is successful.
 vagrant halt
 vagrant destroy
 ```
+
+![Setup](images/12.png)
+
 
 ---
 
@@ -186,6 +219,9 @@ sudo systemctl start docker
 sudo usermod -aG docker $USER
 ```
 
+![Setup](images/13.png)
+
+
 Logout and login again to apply group changes.
 
 ---
@@ -204,6 +240,9 @@ Run container:
 docker run -d -p 8080:80 --name nginx-container nginx
 ```
 
+![Setup](images/14.png)
+
+
 Check running containers:
 
 ```bash
@@ -217,6 +256,9 @@ docker ps
 ```bash
 curl localhost:8080
 ```
+
+![Setup](images/15.png)
+
 
 If Nginx default page appears, container deployment is successful.
 
