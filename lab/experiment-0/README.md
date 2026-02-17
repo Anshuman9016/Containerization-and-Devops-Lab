@@ -99,6 +99,9 @@ This displays:
 - WSL version (WSL 1 or WSL 2)  
 - Running status  
 
+![Setup](images/2.png)
+
+
 ---
 
 ## Step 3: Check and Change WSL Version
@@ -121,6 +124,9 @@ To set WSL 2 as default:
 wsl --set-default-version 2
 ```
 
+![Setup](images/3.png)
+
+
 ---
 
 ## Step 4: Check Installed Linux Distributions
@@ -136,6 +142,9 @@ To install another distribution (Example: Debian):
 ```powershell
 wsl --install -d Debian
 ```
+
+![Setup](images/4.png)
+
 
 ---
 
@@ -153,6 +162,9 @@ To launch Ubuntu:
 wsl
 ```
 
+![Setup](images/5.png)
+
+
 ---
 
 ## Step 6: Fix WSL 2 Kernel Update Issue
@@ -168,6 +180,9 @@ wsl --set-version Ubuntu 2
 ```
 
 If still unresolved, install the latest WSL kernel update from Microsoft and restart.
+
+![Setup](images/6.png)
+
 
 ---
 
@@ -188,6 +203,9 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ```
 
 Restart the system.
+
+![Setup](images/7.png)
+
 
 ---
 
