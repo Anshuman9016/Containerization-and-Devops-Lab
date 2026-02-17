@@ -48,7 +48,7 @@ Open **PowerShell as Administrator** and run:
 wsl --install -d Ubuntu
 ```
 
-![Setup](lab/experiment-0/images/1.png)
+![Setup](images/1.png)
 
 Example Output:
 
