@@ -48,6 +48,8 @@ Open **PowerShell as Administrator** and run:
 wsl --install -d Ubuntu
 ```
 
+images/1.png
+
 Example Output:
 
 ```powershell
