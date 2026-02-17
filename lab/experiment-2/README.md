@@ -52,6 +52,9 @@ Pull the Nginx image from Docker Hub:
 docker pull nginx
 ```
 
+![Setup](images/1.png)
+
+
 This command downloads the latest official Nginx image to the local system.
 
 ---
@@ -63,6 +66,8 @@ Run the Nginx container in detached mode with port mapping:
 ```bash
 docker run -d -p 8080:80 nginx
 ```
+
+![Setup](images/2.png)
 
 ### Explanation:
 
@@ -79,6 +84,9 @@ Check running containers:
 ```bash
 docker ps
 ```
+
+![Setup](images/3.png)
+
 
 This displays:
 
