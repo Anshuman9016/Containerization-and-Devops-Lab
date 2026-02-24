@@ -20,4 +20,4 @@ Batch - 3
 
 ## THEORY
 
-1. [Docker Theory Demo B3B4](theory/Docker-Theory.md)
+1. [Docker Theory B3B4](theory/Docker-Theory.md)
