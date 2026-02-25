@@ -20,4 +20,7 @@ Batch - 3
 
 ## THEORY
 
-1. [Docker Theory B3B4](theory/Docker-Theory.md)
+1. [Lecture -1](theory/Home/README.md)
+2. [Lecture -2](theory/Home1/README.md)
+3. [Lecture -3](theory/Home2/README.md)
+
