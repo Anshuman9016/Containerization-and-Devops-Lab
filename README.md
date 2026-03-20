@@ -30,4 +30,5 @@ Batch - 3
 
 
 Repository URL: https://github.com/Anshuman9016/Containerization-and-Devops-Lab
-Hosted URL: https://anshuman9016.github.io/Containerization-and-Devops-Lab/
+
+Hosted URL: https://anshuman9016.github.io/Containerization-and-Devops-Lab
