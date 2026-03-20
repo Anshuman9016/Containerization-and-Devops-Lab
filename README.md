@@ -29,3 +29,5 @@ Batch - 3
 7. [Lecture -7](theory/Home6.pdf)
 
 
+Repository URL: https://github.com/username/repository-name  
+Hosted URL: https://username.github.io/repository-name/
