@@ -160,7 +160,6 @@ docker build -t ubuntu-server .
 ```
 
 ---
-![alt text](screenshots/dockerfile.png)
 ### Step 4: Launch 4 Server Containers
 
 {% raw %}
@@ -220,7 +219,7 @@ cat inventory.ini
 
 **Expected `inventory.ini` content:**
 
-![alt text](screenshots/image-2.png)
+![alt text](images/1.png)
 
 ### Step 6: Test Connectivity
 
@@ -256,7 +255,7 @@ ansible all -i inventory.ini -m ping
     "ping": "pong"
 }
 ```
-![alt text](screenshots/image-3.png)
+![alt text](images/2.png)
 For verbose output (useful for debugging):
 
 
@@ -290,7 +289,11 @@ For verbose output (useful for debugging):
         content: "Configured by Ansible on {{ inventory_hostname }}"
 ```
 {% endraw %}
-![alt text](screenshots/image-4.png)
+
+![alt text](images/3.png)
+![alt text](images/3.1.png)
+![alt text](images/3.2.png)
+
 Run the playbook:
 
 ```bash
@@ -329,7 +332,7 @@ PLAY RECAP *********************************************************************
 ```
 
 ---
-![alt text](screenshots/imagecopy.png)
+![alt text](images/4.png)
 
 ### Step 8: Create Advanced Playbook (`playbook1.yml`)
 
@@ -389,7 +392,7 @@ Using Ansible to read the created file across all servers:
 ```bash
 ansible all -i inventory.ini -m command -a "cat /root/ansible_test.txt"
 ```
-![alt text](screenshots/image.png)
+![alt text](image/5.png)
 Using Docker exec directly:
 
 ```bash
@@ -397,7 +400,7 @@ for i in {1..4}; do
     docker exec server${i} cat /root/ansible_test.txt
 done
 ```
-![alt text](screenshots/image-1.png)
+![alt text](images/6.png)
 **Expected output on each server:**
 
 ```
