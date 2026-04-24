@@ -21,7 +21,7 @@ docker exec test-container cat /data/message.txt
 Solution: Docker Volumes
 ```
 
-![alt text](1.png)
+![alt text](images/1.png)
 
 ## Lab 2: Volume Types
 
@@ -50,7 +50,7 @@ docker volume ls
 # Inspect volume
 docker volume inspect mydata
 ```
-![alt text](2.png)
+![alt text](images/2.png)
 
 
 3. Bind Mounts (Host Directory)
@@ -69,9 +69,9 @@ docker exec web3 cat /app/data/host-file.txt
 # Shows: From Host
 ```
 
-![alt text](3.1.png)
+![alt text](images/3.1.png)
 
-![alt text](3.2.png)
+![alt text](images/3.2.png)
 
 ### Lab 3: Practical Volume Examples
 Example 1: Database with Persistent Storage
@@ -122,9 +122,9 @@ docker run -d \
 # Test
 curl http://localhost:8080
 ```
-![alt text](4.1.png)
+![alt text](images/4.1.png)
 
-![alt text](4.2.png)
+![alt text](images/4.2.png)
 
 Lab 4: Volume Management Commands
 ```Bash
@@ -147,9 +147,9 @@ docker volume rm volume-name
 docker cp local-file.txt container-name:/path/in/volume
 
 ```
-![alt text](5.1.png)
+![alt text](images/5.1.png)
 
-![alt text](5.2.png)
+![alt text](images/5.2.png)
 
 ## Part 2: Environment Variables
 Lab 1: Setting Environment Variables
@@ -191,7 +191,7 @@ docker run -d \
   --env-file .env.secrets \
   my-app
 ```
-![alt text](6.png)
+![alt text](images/6.png)
 
 ### Method 3: In Dockerfile
 ```Bash
@@ -227,7 +227,7 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=debug_mode)
 ```
-![alt text](7.png)
+![alt text](images/7.png)
 
 ### Dockerfile with Environment Variables
 ```Bash
@@ -250,11 +250,11 @@ ENV DEBUG=false
 EXPOSE 5000
 CMD ["python", "app.py"]
 ```
-![alt text](8.1.png)
+![alt text](images/8.1.png)
 
-![alt text](8.2.png)
+![alt text](images/8.2.png)
 
-![alt text](8.3.png)
+![alt text](images/8.3.png)
 
 ### Lab 3: Test Environment Variables
 ```Bash
@@ -275,7 +275,7 @@ docker exec flask-app printenv DATABASE_HOST
 # Test the endpoint
 curl http://localhost:5000/config
 ```
-![alt text](9.png)
+![alt text](images/9.png)
 
 ### Part 3: Docker Monitoring 
 ### Lab 1: Basic Monitoring Commands
@@ -306,7 +306,7 @@ docker stats --format json --no-stream
 docker stats --no-stream --no-trunc
 
 ```
-![alt text](10.png)
+![alt text](images/10.png)
 
 ### Lab 2: docker top - Process Monitoring
 ``` Bash
@@ -340,9 +340,9 @@ docker logs --since 2024-01-15 container-name
 # Combine options
 docker logs -f --tail 50 -t container-name
 ```
-![alt text](11.png)
+![alt text](images/11.png)
 
-![alt text](11.1.png)
+![alt text](images/11.1.png)
 
 ### Lab 4: Container Inspection
 ```Bash
@@ -429,7 +429,7 @@ docker run -d --name web2 --network my-network nginx
 # Containers can communicate using container names
 docker exec web1 curl http://web2
 ```
-![alt text](12.png)
+![alt text](images/12.png)
 
 ### 2. Host Network
 ```Bash
@@ -441,7 +441,7 @@ docker run -d --name host-app --network host nginx
 # Access directly on host port 80
 curl http://localhost
 ```
-![alt text](13.png)
+![alt text](images/13.png)
 
 ### 3. None Network
 ```Bash
@@ -452,14 +452,14 @@ docker run -d --name isolated-app --network none alpine sleep 3600
 docker exec isolated-app ifconfig
 
 ```
-![alt text](14.png)
+![alt text](images/14.png)
 
 ### 4. Overlay Network (Swarm)
 ```Bash
 # For Docker Swarm multi-host networking
 docker network create --driver overlay my-overlay
 ```
-![alt text](15.png)
+![alt text](images/15.png)
 
 ### Lab 3: Network Management Commands
 ```Bash
@@ -479,9 +479,9 @@ docker network rm network-name
 # Prune unused networks
 docker network prune
 ```
-![alt text](16.png) 
+![alt text](images/16.png) 
 
-![alt text](17.png)
+![alt text](images/17.png)
 
 ### Lab 4: Multi-Container Application Example
 Web App + Database Communication
@@ -550,7 +550,7 @@ docker run -d -p 127.0.0.1:8080:80 --name app4 nginx
 # Dockerfile: EXPOSE 80
 # Still need -p to publish
 ```
-![alt text](image-18.png)
+![alt text](images/18.png)
 
 ### Part 5: Complete Real-World Example
 Application Architecture:
@@ -618,6 +618,6 @@ docker exec flask-app ping -c 2 redis
 # View network details
 docker network inspect myapp-network
 ```
-![alt text](19.png)
-![alt text](20.png)
-![alt text](20.1.png)
+![alt text](images/19.png)
+![alt text](images/20.png)
+![alt text](images/20.1.png)
