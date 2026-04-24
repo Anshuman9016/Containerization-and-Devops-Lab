@@ -28,9 +28,9 @@ docker run -d \
   -e NGINX_HOST=localhost \
   nginx:alpine
 ```
-![alt text](1.png)
+![alt text](images/1.png)
 
-![alt text](1.1.png)
+![alt text](images/1.1.png)
 
 ### 2. Docker Compose (Declarative Approach)
 
@@ -51,7 +51,7 @@ services:
       NGINX_HOST: localhost
     restart: unless-stopped
 ```
-![alt text](2.png)
+![alt text](images/2.png)
 
 ### 3. Mapping: Docker Run vs Docker Compose
 
@@ -96,25 +96,25 @@ docker run -d \
   nginx:alpine
 ```
 
-![alt text](3.png)
+![alt text](images/3.png)
 
-![alt text](3.1.png)
+![alt text](images/3.1.png)
 
-![alt text](3.2.png)
+![alt text](images/3.2.png)
 
 **Verify container is running:**
 ```bash
 docker ps
 ```
-![alt text](4.png)
+![alt text](images/4.png)
 
 **Access in browser:** `http://localhost:8081`
 
 **📸 Screenshot – Browser output (Docker Run):**
 
-![Browser output - Docker Run localhost:8081]![alt text](5.png)
+![Browser output - Docker Run localhost:8081]![alt text](images/5.png)
 
-![alt text](5.1.png)
+![alt text](images/5.1.png)
 
 
 
@@ -147,7 +147,7 @@ services:
 ```bash
 docker compose up -d
 ```
-![alt text](6.png)
+![alt text](images/6.png)
 
 **Verify:**
 ```bash
@@ -173,7 +173,7 @@ docker compose down
 ```bash
 docker network create wp-net
 ```
-![alt text](7.png)
+![alt text](images/7.png)
 
 **Step 2: Run MySQL container:**
 ```bash
@@ -184,7 +184,7 @@ docker run -d \
   -e MYSQL_DATABASE=wordpress \
   mysql:5.7
 ```
-![alt text](8.png)
+![alt text](images/8.png)
 
 **Step 3: Run WordPress container:**
 ```bash
@@ -196,20 +196,20 @@ docker run -d \
   -e WORDPRESS_DB_PASSWORD=secret \
   wordpress:latest
 ```
-![alt text](9.png)
+![alt text](images/9.png)
 
 **Verify both containers running:**
 ```bash
 docker ps
 ```
-![alt text](10.png)
+![alt text](images/10.png)
 
 **Access in browser:** `http://localhost:8082`
 
 **📸 Screenshot – WordPress installation page (via Docker Run):**
-![alt text](11.png)
+![alt text](images/11.png)
 
-![alt text](12.png)
+![alt text](images/12.png)
 
 > *The WordPress installation page loads at `http://localhost:8082`, confirming both the MySQL and WordPress containers are running and communicating via the `wp-net` Docker network.*
 
@@ -242,7 +242,7 @@ services:
 volumes:
   mysql_data:
 ```
-![alt text](13.png)
+![alt text](images/13.png)
 
 **Start application:**
 ```bash
@@ -257,7 +257,7 @@ docker ps
 
 **📸 Screenshot – WordPress page via Docker Compose:**
 
-![alt text](14.png)
+![alt text](images/14.png)
 
 **Stop and remove everything:**
 ```bash
@@ -286,7 +286,7 @@ docker run -d \
   --restart unless-stopped \
   node:18-alpine
 ```
-![alt text](15.png)
+![alt text](images/15.png)
 
 **Equivalent `docker-compose.yml`:**
 ```yaml
@@ -302,7 +302,7 @@ services:
       DEBUG: "false"
     restart: unless-stopped
 ```
-![alt text](16.png)
+![alt text](images/16.png)
 
 **Run:**
 ```bash
@@ -338,7 +338,7 @@ docker run -d \
   -e DB_PASS=secret \
   python:3.11-slim
 ```
-![alt text](17.png)
+![alt text](images/17.png)
 
 **Equivalent `docker-compose.yml`:**
 ```yaml
@@ -376,7 +376,7 @@ networks:
   app-net:
 ```
 
-![alt text](18.png)
+![alt text](images/18.png)
 
 **Run:**
 ```bash
