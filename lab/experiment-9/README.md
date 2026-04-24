@@ -393,6 +393,7 @@ Using Ansible to read the created file across all servers:
 ansible all -i inventory.ini -m command -a "cat /root/ansible_test.txt"
 ```
 ![alt text](image/5.png)
+
 Using Docker exec directly:
 
 ```bash
