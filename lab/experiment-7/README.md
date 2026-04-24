@@ -161,7 +161,7 @@ services:
 volumes:
   jenkins_home:
 ```
-![alt text](1.png)
+![alt text](images/1.png)
 ### 6.2 Start Jenkins
 
 ```bash
@@ -278,57 +278,57 @@ Successfully implemented a complete CI/CD pipeline where:
 
 ### Screenshot 1 — Jenkins Plugin Installation (Getting Started)
 
-![Create First Admin User]![alt text](2.png)
+![Create First Admin User]![alt text](images/2.png)
 
-![Jenkins Getting Started - Plugin Setup]![alt text](2.1.png)
+![Jenkins Getting Started - Plugin Setup]![alt text](images/2.1.png)
 
 > Jenkins loading suggested plugins during the initial setup wizard at `localhost:8080`.
 
 ---
 
 ### Screenshot 2 — Create First Admin User
-![Create First Admin User]![alt text](3.png)
+![Create First Admin User]![alt text](images/3.png)
 
 > Creating the admin user `MayankThakur` during Jenkins initial configuration.
 
 ---
 
 ### Screenshot 3 — LocalTunnel Warning Page
-![LocalTunnel Tunnel Warning]![alt text](4.png)
+![LocalTunnel Tunnel Warning]![alt text](images/4.png)
 
 > The localtunnel gateway page for `https://green-donuts-nail.loca.lt` — requiring IP confirmation before accessing Jenkins publicly.
 
 ---
 
 ### Screenshot 4 — LocalTunnel Setup in Terminal
-![LocalTunnel Terminal Setup]!![alt text](5.png)
+![LocalTunnel Terminal Setup]!![alt text](images/5.png)
 
 > Terminal showing `npm install -g localtunnel`, `docker ps` confirming Jenkins container is running, and `npx localtunnel --port 8080` generating the public tunnel URL.
 
 ---
 
 ### Screenshot 5 — LocalTunnel Connection Error (Firewall)
-![LocalTunnel Connection Error]![alt text](6.png)
+![LocalTunnel Connection Error]![alt text](images/6.png)
 
 > Localtunnel connection refused error due to firewall settings — resolved by switching to `npx localtunnel` instead of the global `lt` command.
 
 ---
 
 ### Screenshot 6 — Jenkins Account Settings
-![Jenkins Account Settings]!![alt text](7.png)
+![Jenkins Account Settings]!![alt text](images/7.png)
 
 > Jenkins user account page for `mayankthakur` showing profile, credentials, and email settings via the localtunnel public URL.
 
 ---
 
 ### Screenshot 7 — Adding New Node (Agent)
-![Jenkins New Node Creation]![alt text](8.png)
+![Jenkins New Node Creation]![alt text](images/8.png)
 > Creating a new Permanent Agent node named `Mayank node` in Jenkins under `Manage Jenkins → Nodes → New Node`.
 
 ---
 
 ### Screenshot 8 — Nodes Dashboard
-![alt text](9.png)
+![alt text](images/9.png)
 
 > Jenkins Nodes page showing the `Built-In Node` (Linux aarch64) and the newly added `Mayank node macos` agent.
 
@@ -336,7 +336,7 @@ Successfully implemented a complete CI/CD pipeline where:
 
 ### Screenshot 9 — Agent Connection Command
 
-![Jenkins Agent Command]![alt text](10.png)
+![Jenkins Agent Command]![alt text](images/10.png)
 
 > Jenkins displaying the JNLP agent connection commands (Unix/Windows) with a secret token to connect `Mayank node macos` as a remote agent.
 
