@@ -179,7 +179,7 @@ docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ### 6.4 Initial Setup
 
 - Install suggested plugins
-- Create admin user (`MayankThakur`)
+- Create admin user (`Anshuman_M`)
 
 ---
 
