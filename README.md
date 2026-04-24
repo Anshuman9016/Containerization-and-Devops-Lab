@@ -21,7 +21,6 @@ Batch - 3
 | 6 | Docker Run vs Docker Compose | [View](lab/experiment-6/README.md) |
 | 7 | CI/CD Pipeline using Jenkins, GitHub and Docker Hub | [View](lab/experiment-7/README.md) |
 | 9 | Ansible Configuration Management | [View](lab/experiment-9/README.md) |
-| 10 | SonarQube — Static Code Analysis | [View](lab/experiment-10/README.md) |
 
 ---
 
