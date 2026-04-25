@@ -289,7 +289,7 @@ Successfully implemented a complete CI/CD pipeline where:
 ### Screenshot 2 — Create First Admin User
 ![Create First Admin User]![alt text](images/3.png)
 
-> Creating the admin user `MayankThakur` during Jenkins initial configuration.
+> Creating the admin user `Anshuman Mohapatra` during Jenkins initial configuration.
 
 ---
 
@@ -317,20 +317,20 @@ Successfully implemented a complete CI/CD pipeline where:
 ### Screenshot 6 — Jenkins Account Settings
 ![Jenkins Account Settings]!![alt text](images/7.png)
 
-> Jenkins user account page for `mayankthakur` showing profile, credentials, and email settings via the localtunnel public URL.
+> Jenkins user account page for `Anshuman Mohapatra` showing profile, credentials, and email settings via the localtunnel public URL.
 
 ---
 
 ### Screenshot 7 — Adding New Node (Agent)
 ![Jenkins New Node Creation]![alt text](images/8.png)
-> Creating a new Permanent Agent node named `Mayank node` in Jenkins under `Manage Jenkins → Nodes → New Node`.
+> Creating a new Permanent Agent node named `Anshuman Mohapatra` in Jenkins under `Manage Jenkins → Nodes → New Node`.
 
 ---
 
 ### Screenshot 8 — Nodes Dashboard
 ![alt text](images/9.png)
 
-> Jenkins Nodes page showing the `Built-In Node` (Linux aarch64) and the newly added `Mayank node macos` agent.
+> Jenkins Nodes page showing the `Built-In Node` (Linux aarch64) and the newly added `Anshuman Mohapatra node macos` agent.
 
 ---
 
@@ -338,7 +338,7 @@ Successfully implemented a complete CI/CD pipeline where:
 
 ![Jenkins Agent Command]![alt text](images/10.png)
 
-> Jenkins displaying the JNLP agent connection commands (Unix/Windows) with a secret token to connect `Mayank node macos` as a remote agent.
+> Jenkins displaying the JNLP agent connection commands (Unix/Windows) with a secret token to connect `Anshuman Mohapatra node macos` as a remote agent.
 
 ---
 
