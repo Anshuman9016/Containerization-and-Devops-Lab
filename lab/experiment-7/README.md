@@ -221,7 +221,7 @@ npm install -g localtunnel
 npx localtunnel --port 8080
 ```
 
-This generated a public URL (e.g., `https://green-donuts-nail.loca.lt`) which was used as the webhook payload URL.
+This generated a public URL (e.g., `(https://eight-ducks-open.loca.lt/)`) which was used as the webhook payload URL.
 
 ---
 
@@ -249,7 +249,7 @@ Jenkins runs inside Docker with the Docker socket mounted:
 
 This allows Jenkins to directly control the host's Docker daemon — building and pushing images without needing a separate agent node.
 
-A custom **Permanent Agent** node (`Mayank node macos`) was also configured in Jenkins under `Manage Jenkins → Nodes → New Node` to demonstrate multi-node agent setup.
+A custom **Permanent Agent** node (`Anshuman Mohapatra node macos`) was also configured in Jenkins under `Manage Jenkins → Nodes → New Node` to demonstrate multi-node agent setup.
 
 ---
 
@@ -296,7 +296,7 @@ Successfully implemented a complete CI/CD pipeline where:
 ### Screenshot 3 — LocalTunnel Warning Page
 ![LocalTunnel Tunnel Warning]![alt text](images/4.png)
 
-> The localtunnel gateway page for `https://green-donuts-nail.loca.lt` — requiring IP confirmation before accessing Jenkins publicly.
+> The localtunnel gateway page for `(https://eight-ducks-open.loca.lt/)` — requiring IP confirmation before accessing Jenkins publicly.
 
 ---
 
