@@ -38,6 +38,11 @@ Batch - 3
 7. [Lecture -7 : Redis](theory/Home6.pdf)
 
 
+##  ASSIGNMENT
+
+Assignment - 1 : <https://anshuman9016.github.io/Assignment-1/>
+
+
 Repository URL: <https://github.com/Anshuman9016/Containerization-and-Devops-Lab>
 
 Hosted URL: <https://anshuman9016.github.io/Containerization-and-Devops-Lab>
