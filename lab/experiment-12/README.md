@@ -73,7 +73,8 @@ spec:
         ports:
         - containerPort: 80       # Port inside the container
 ```
-![alt text](screenshots/wddeploy.png)
+![alt text](images/1.png)
+![alt text](images/1.1.png)
 **Step 2:** Apply the deployment
 
 ```bash
@@ -82,7 +83,7 @@ kubectl apply -f wordpress-deployment.yaml
 
 > **What happens?** Kubernetes creates 2 pods running WordPress.
 
-![alt text](screenshots/image1.png)
+![alt text](images/2.png)
 
 ---
 
@@ -107,7 +108,7 @@ spec:
       targetPort: 80        # Pod port
       nodePort: 30007       # External port (range: 30000-32767)
 ```
-![alt text](screenshots/img3.png)
+![alt text](images/3.png)
 **Step 2:** Apply the service
 
 ```bash
@@ -126,14 +127,14 @@ kubectl apply -f wordpress-service.yaml
 kubectl get pods
 ```
 
-![alt text](screenshots/image4.png)
+![alt text](images/4.png)
 
 **Check the service:**
 
 ```bash
 kubectl get svc
 ```
-![alt text](screenshots/image.png)
+![alt text](images/5.png)
 
 **Access WordPress in your browser:**
 
@@ -143,9 +144,9 @@ http://localhost:30007
 
 - **Minikube:** Usually `minikube ip`
 - **k3d:** Usually `localhost`
-![alt text](screenshots/portforward.png)
+![alt text](images/6.png)
 
-![alt text](screenshots/wordpress.png)
+![alt text](images/7.png)
 
 ---
 
@@ -156,13 +157,13 @@ Increase the number of pods from 2 to 4:
 ```bash
 kubectl scale deployment wordpress --replicas=4
 ```
-![alt text](screenshots/scale.png)
+![alt text](images/8.png)
 Verify:
 
 ```bash
 kubectl get pods
 ```
-![alt text](screenshots/pods.png)
+![alt text](images/9.png)
 
 > You should now see 4 running pods.
 
@@ -198,7 +199,7 @@ kubectl get pods
 
 > **Why?** The deployment ensures the desired number (4) is always running.
 
-![alt text](screenshots/self.png)
+![alt text](images/10.png)
 
 ---
 
@@ -209,7 +210,7 @@ kubectl get nodes
 kubectl cluster-info
 ```
 
-![alt text](screenshots/cluster.png)
+![alt text](images/11.png)
 
 ---
 
@@ -261,8 +262,6 @@ sudo apt install -y kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 ```
 
-![alt text](screenshots/image-2.png)
-
 **Step 2:** Initialize the control plane (master node only)
 
 ```bash
@@ -287,8 +286,6 @@ sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-![alt text](screenshots/image-3.png)
-
 Now you can run `kubectl get nodes` to see the master.
 
 **Step 4:** Install a network plugin (required for pods to communicate)
@@ -296,8 +293,6 @@ Now you can run `kubectl get nodes` to see the master.
 ```bash
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 ```
-
-![alt text](screenshots/image-4.png)
 
 Wait 1–2 minutes for Calico to start.
 
@@ -317,8 +312,6 @@ Run that exact command on each worker node.
 ```bash
 kubectl get nodes
 ```
-
-![alt text](screenshots/image-5.png)
 
 Expected output:
 ```
