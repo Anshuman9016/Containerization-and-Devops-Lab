@@ -85,14 +85,16 @@ Navigate to the experiment folder and start all containers:
 cd ~/Desktop/exp10
 docker-compose up -d
 ```
-![alt text](image.png)
+![alt text](images/1.png)
+![alt text](images/2.png)
+![alt text](images/3.png)
 Watch logs until you see **"SonarQube is operational"**:
 
 ```bash
 docker-compose logs -f sonarqube
 ```
 
-![alt text](image-1.png)
+![alt text](images/4.png)
 
 
 
@@ -101,7 +103,7 @@ Verify containers are running:
 ```bash
 docker ps
 ```
-![alt text](image-2.png)
+![alt text](images/5.png)
 **Expected:** Two containers — `sonarqube` and `sonar-db` — both with status `Up`.
 
 
@@ -118,9 +120,9 @@ http://localhost:9000
 - Default credentials: **admin / admin**
 - You will be prompted to change the password on first login (set it to something like `admin123`)
 
-![alt text](image-3.png)
+![alt text](images/6.png)
 
-![alt text](image-4.png)
+![alt text](images/6.1.png)
 
 ---
 
@@ -136,7 +138,7 @@ The scanner needs a token to authenticate with the server.
 
 
 
-![alt text](image-5.png)
+![alt text](images/7.png)
 
 Now export the token as an environment variable in your terminal (replace with your actual token):
 
@@ -174,7 +176,7 @@ Replace `YOUR_TOKEN_HERE` in `pom.xml` with your actual token:
 cd ~/Desktop/exp10/sample-java-app
 sed -i '' "s/YOUR_TOKEN_HERE/$SONAR_TOKEN/" pom.xml
 ```
-![alt text](3.png)
+![alt text](images/8.png)
 Verify the replacement:
 
 ```bash
@@ -221,7 +223,7 @@ docker run --rm \
 
 > **Note:** Use `http://sonarqube:9000` (container name), **not** `localhost`, because the scanner container is on the same Docker network as the server.
 
-![alt text](step6.png)
+![alt text](images/9.png)
 
 ---
 
@@ -233,7 +235,8 @@ After the scan finishes, open:
 http://localhost:9000/dashboard?id=sample-java-app
 ```
 
-![alt text](dashboard.png)
+![alt text](images/10.png)
+![alt text](images/10.1.png)
 
 
 
@@ -281,9 +284,9 @@ pipeline {
     }
 }
 ```
-![alt text](jenkins.png)
-![alt text](jenkins1.png)
-![alt text](image-6.png)
+![alt text](images/11.png)
+![alt text](images/12.png)
+![alt text](images/13.png)
 **Pipeline flow:**
 
 ![alt text](image-7.png)
