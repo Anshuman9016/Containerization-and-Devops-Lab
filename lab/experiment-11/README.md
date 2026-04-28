@@ -33,7 +33,7 @@ Verify that your node is ready as a Swarm manager:
 ```bash
 docker node ls
 ```
-![alt text](image.png)
+![alt text](images/1.png)
 
 
 
@@ -44,7 +44,7 @@ In Swarm, we deploy a stack using the same Compose file. Swarm reads the file an
 ```bash
 docker stack deploy -c docker-compose.yml wpstack
 ```
-![alt text](image-1.png)
+![alt text](images/2.png)
 
 
 
@@ -55,7 +55,7 @@ List all services in the stack:
 ```bash
 docker service ls
 ```
-![alt text](image-2.png)
+![alt text](images/3.png)
 
 See detailed tasks (containers) for a specific service:
 
@@ -68,7 +68,7 @@ See all running containers (notice they are managed by Swarm):
 ```bash
 docker ps
 ```
-![alt text](image-3.png)
+![alt text](images/4.png)
 
 
 
@@ -79,7 +79,7 @@ Open your browser and navigate to:
 
 You should see the WordPress setup screen.
 
-![alt text](image-4.png)
+![alt text](images/5.png)
 
 ---
 
@@ -90,7 +90,7 @@ Scale WordPress from 1 to 3 replicas using Swarm's orchestration.
 ```bash
 docker service scale wpstack_wordpress=3
 ```
-![alt text](image-5.png)
+![alt text](images/6.png)
 
 Verify the scaling:
 
@@ -99,7 +99,7 @@ docker service ls
 docker service ps wpstack_wordpress
 docker ps | grep wordpress
 ```
-![alt text](image-6.png)
+![alt text](images/7.png)
 
 *Note: Swarm automatically balances traffic among all 3 containers on port 8081 without port conflicts.*
 
@@ -118,14 +118,14 @@ docker ps | grep wordpress
 ```bash
 docker kill <container-id>
 ```
-![alt text](image-7.png)
+![alt text](images/8.png)
 
 **Step 3:** Watch Swarm recreate it automatically:
 ```bash
 docker service ps wpstack_wordpress
 docker ps | grep wordpress
 ```
-![alt text](image-8.png)
+![alt text](images/9.png)
 
 *Notice the killed container is shut down, and a new container is automatically created to maintain 3 replicas.*
 
@@ -140,4 +140,4 @@ docker stack rm wpstack
 docker service ls
 docker ps
 ```
-![alt text](image-9.png)
+![alt text](images/10.png)
